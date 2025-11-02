@@ -4,19 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <header>
       <div class="container">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
           <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="#">Shop</a>
             <button
               class="navbar-toggler"
               type="button"
@@ -31,36 +33,35 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#"
-                    >Home</a
-                  >
+                  <a class="nav-link active" aria-current="page" href="#"> 
+                  <svg class="image-svg">
+                    <use href="./symbol-defs.svg#icon-home">
+                  </svg>
+                    Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    href="#"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Dropdown
+                  <a class="nav-link active" href="#">
+                    <svg class="image-svg">
+                      <use href="./symbol-defs.svg#icon-apps">
+                    </svg>
+                    Catalog
                   </a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li>
-                      <a class="dropdown-item" href="#">Another action</a>
-                    </li>
-                    <li><hr class="dropdown-divider" /></li>
-                    <li>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </li>
-                  </ul>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                  <a class="nav-link active" href="#">
+                    <svg class="image-svg">
+                      <use href="./symbol-defs.svg#icon-shopping-cart">
+                    </svg>
+                    Shoping cart
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">
+                    <svg class="image-svg">
+                      <use href="./symbol-defs.svg#icon-user">
+                    </svg>
+                    Account
+                  </a>
                 </li>
               </ul>
               <form class="d-flex" role="search">
@@ -80,48 +81,263 @@
       </div>
     </header>
     <main>
-      <section>
+      <section class="shop-cards" style="margin-bottom: 50px;">
         <div class="container">
-          <div id="carouselExample" class="carousel slide">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="./buba.webp" class="d-block w-100" alt="buba"/>
-              </div>
-              <div class="carousel-item">
-                <img src="./" class="d-block w-100" alt="..." />
-              </div>
-              <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="..." />
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            <div class="card" style="width: 18rem;">
+              <img src="./apple_juice.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Apple juice</h5>
+                <p class="card-text">(500 ml)</p>
               </div>
             </div>
-            <button
-              class="carousel-control-prev"
-              type="button"
-              data-bs-target="#carouselExample"
-              data-bs-slide="prev"
-            >
-              <span
-                class="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button
-              class="carousel-control-next"
-              type="button"
-              data-bs-target="#carouselExample"
-              data-bs-slide="next"
-            >
-              <span
-                class="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+          </button>
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            <div class="card" style="width: 18rem;">
+              <img src="./apple_pressings.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">apple pomance</h5>
+                <p class="card-text">price: 3$</p>
+              </div>
+            </div>
+          </button>
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            <div class="card" style="width: 18rem;">
+              <img src="./banana_juice.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">banana juice</h5>
+                <p class="card-text">price: 4$</p>
+              </div>
+            </div>
+          </button>
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            <div class="card" style="width: 18rem;">
+              <img src="./artwork2.jpg" class="card-img-top" style="height: 300px;" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Best Juice Shop Salesman Artwork</h5>
+                <p class="card-text">price: 100$</p>
+              </div>
+            </div>
+          </button>
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            <div class="card" style="width: 18rem;">
+              <img src="./carrot_juice.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">carrot juice</h5>
+                <p class="card-text">price: 5$</p>
+              </div>
+            </div>
+          </button>
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            <div class="card" style="width: 18rem;">
+              <img src="./eggfruit_juice.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">eggfruit juice</h5>
+                <p class="card-text">price: 6$</p>
+              </div>
+            </div>
+          </button>
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            <div class="card" style="width: 18rem;">
+              <img src="./fruit_press.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">fruit press</h5>
+                <p class="card-text">price: 89.99$</p>
+              </div>
+            </div>
+          </button>
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            <div class="card" style="width: 18rem;">
+              <img src="./green_smoothie.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">green smoothie</h5>
+                <p class="card-text">price: 1.99$</p>
+              </div>
+            </div>
+          </button>
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            <div class="card" style="width: 18rem;">
+              <img src="./permafrost.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Juice Shop "Permafrost" 2020 Edition</h5>
+                <p class="card-text">price: 9999.99$</p>
+              </div>
+            </div>
+          </button>
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            <div class="card" style="width: 18rem;">
+              <img src="./lemon_juice.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">green smoothie</h5>
+                <p class="card-text">price: 2.99$</p>
+              </div>
+            </div>
+          </button>
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            <div class="card" style="width: 18rem;">
+              <img src="./melon_bike.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Melon Bike (Comeback-Product 2018 Edition)</h5>
+                <p class="card-text">2999$</p>
+              </div>
+            </div>
+          </button>
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            <div class="card" style="width: 18rem;">
+              <img src="./fan_facemask.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Fan facemask</h5>
+                <p class="card-text">price: 13.49$</p>
+              </div>
+            </div>
+          </button>
+          <div class="card" aria-hidden="true" style="width: 18rem;">
+            <img src="./loading.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title placeholder-glow">
+                <span class="placeholder col-6"></span>
+              </h5>
+              <p class="card-text placeholder-glow">
+                <span class="placeholder col-7"></span>
+                <span class="placeholder col-4"></span>
+                <span class="placeholder col-4"></span>
+                <span class="placeholder col-6"></span>
+                <span class="placeholder col-8"></span>
+              </p>
+            </div>
           </div>
         </div>
       </section>
     </main>
+    <footer class="last-section">
+      <div class="container">
+        <img src="./JuiceShop_Logo.png" alt="logo" class="footer-img">
+        <p><a href="tel:+1234567890" class="footer-link">+1234567890 - number of our help command</a></p>
+        <p><a href="mailto:admin@jus-co.com" class="footer-link">admin@jus-co.com - email to help command/leave an application for a work</a></p>
+      </div>
+    </footer>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">
+              Please, do step-by-step in this window
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form class="row g-3 needs-validation" novalidate>
+              <div class="col-md-4">
+                <label for="validationCustom01" class="form-label"
+                  >First name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="validationCustom01"
+                  value="Mark"
+                  required
+                />
+                <div class="valid-feedback">Looks good!</div>
+              </div>
+              <div class="col-md-4">
+                <label for="validationCustom02" class="form-label"
+                  >Last name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="validationCustom02"
+                  value="Otto"
+                  required
+                />
+                <div class="valid-feedback">Looks good!</div>
+              </div>
+              <div class="col-md-4">
+                <label for="validationCustomUsername" class="form-label"
+                  >Username</label
+                >
+                <div class="input-group has-validation">
+                  <span class="input-group-text" id="inputGroupPrepend">@</span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="validationCustomUsername"
+                    aria-describedby="inputGroupPrepend"
+                    required
+                  />
+                  <div class="invalid-feedback">Please choose a username.</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label for="validationCustom03" class="form-label">City</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="validationCustom03"
+                  required
+                />
+                <div class="invalid-feedback">Please provide a valid city.</div>
+              </div>
+              <div class="col-md-3">
+                <label for="validationCustom04" class="form-label">State</label>
+                <select class="form-select" id="validationCustom04" required>
+                  <option selected disabled value="">Choose...</option>
+                  <option>...</option>
+                </select>
+                <div class="invalid-feedback">Please select a valid state.</div>
+              </div>
+              <div class="col-md-3">
+                <label for="validationCustom05" class="form-label">Zip</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="validationCustom05"
+                  required
+                />
+                <div class="invalid-feedback">Please provide a valid zip.</div>
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="invalidCheck"
+                    required
+                  />
+                  <label class="form-check-label" for="invalidCheck">
+                    Agree to terms and conditions
+                  </label>
+                  <div class="invalid-feedback">
+                    You must agree before submitting.
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <button class="btn btn-primary" type="submit">
+                  Submit form
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"

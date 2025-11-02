@@ -1,0 +1,26 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.image-svg {
+    width: 15px;
+    height: 15px;
+}
+.footer-img {
+    width: 100px;
+    height: 100px;
+}
+.last-section{
+    background: linear-gradient(180deg, #fff8e1 0%, #ffe0b2 100%);
+    background-attachment: fixed;
+}
+.footer-link {
+    text-decoration: none;
+    color: #3b3b3b;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+.footer-link:hover{
+    color: #e69a00;
+    text-shadow: 0 0 6px rgba(255, 204, 102, 0.6);
+}
